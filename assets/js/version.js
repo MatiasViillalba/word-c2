@@ -5,5 +5,5 @@
  */
 window.WC2 = window.WC2 || {};
 window.WC2.APP_NAME = 'Word C2';
-window.WC2.VERSION = '1.0.0';
-window.WC2.BUILD = '2026.09.08.1';
+window.WC2.VERSION = '1.1.0';
+window.WC2.BUILD = '2026.09.08.2';

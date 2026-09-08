@@ -146,6 +146,23 @@ if (JSDOM) {
     assert.ok(active().querySelector('.affix__bar'), 'no coverage bar rendered');
   });
 
+  test('settings offers sync and its sheet opens with both doors', () => {
+    WC2.app.go('settings');
+    const activate = [...active().querySelectorAll('.set-row')]
+      .find((row) => row.textContent.includes('Sincronizar mis dispositivos'));
+    assert.ok(activate, 'the sync row is missing from Ajustes');
+
+    activate.click();
+    const sheet = $('#sheet');
+    assert.equal(sheet.hidden, false, 'the sync sheet did not open');
+    assert.ok(sheet.querySelector('.sync-input'), 'there is nowhere to paste a code');
+
+    const buttons = [...sheet.querySelectorAll('button')].map((b) => b.textContent);
+    assert.ok(buttons.includes('Crear un código nuevo'));
+    assert.ok(buttons.includes('Vincular este dispositivo'));
+    WC2.sheet.close();
+  });
+
   test('the reading scale reaches the document element', () => {
     WC2.util.applyTextScale(1.3);
     assert.equal(window.document.documentElement.style.getPropertyValue('--read-scale'), '1.3');

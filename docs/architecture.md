@@ -18,7 +18,9 @@ index.html          Shell: topbar, 10 pantallas vacías, tab bar, sheet
   ├─ assets/js/
   │   ├─ version.js       Identidad de build (namespace del caché del SW)
   │   ├─ core/util.js     Hyperscript el(), normalización de respuestas, PRNG, fechas
+  │   ├─ core/sync-config.js  URL y clave pública del proyecto de Supabase
   │   ├─ core/store.js    Estado persistente en localStorage + racha
+  │   ├─ core/sync.js     Fusión y viaje bajar → fusionar → subir (ver docs/sync.md)
   │   ├─ core/srs.js      Cajas de Leitner, vencimientos, bandas Cambridge
   │   ├─ core/words.js    Cuaderno de errores por palabra
   │   ├─ core/affixes.js  Catálogo de afijos y analizador morfológico
@@ -36,7 +38,8 @@ pantallas, router.
 ## Flujo de arranque
 
 1. `version.js` crea el namespace `WC2`.
-2. El núcleo registra `util`, `store`, `srs`, `words`, `affixes` y `content`.
+2. El núcleo registra `util`, `sync-config`, `store`, `sync`, `srs`, `words`,
+   `affixes` y `content`.
 3. Los 33 archivos de datos llaman a `WC2.content.registerPassages` /
    `registerDrills`. Cada ítem se normaliza (raíz y respuesta en mayúsculas), se
    le calcula su clave de derivación y se analiza morfológicamente **una sola

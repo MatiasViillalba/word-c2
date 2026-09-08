@@ -167,6 +167,7 @@
   function boot() {
     WC2.store.load();
     injectDefs();
+    WC2.sync.init();
     WC2.applyTextScale(WC2.store.get('settings').textScale);
     wireChrome();
     refreshStreakPill();

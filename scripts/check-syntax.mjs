@@ -19,7 +19,8 @@ const files = [
   'sw.js',
   'assets/js/version.js',
   'assets/js/app.js',
-  ...['util', 'store', 'srs', 'words', 'affixes', 'content'].map((n) => `assets/js/core/${n}.js`),
+  ...['util', 'sync-config', 'store', 'sync', 'srs', 'words', 'affixes', 'content']
+    .map((n) => `assets/js/core/${n}.js`),
   ...['toast', 'home', 'exam', 'drill', 'result', 'mistakes', 'weak', 'library', 'affixes', 'stats', 'settings']
     .map((n) => `assets/js/ui/${n}.js`),
   ...dataFiles.map((f) => `assets/js/data/${f}`)

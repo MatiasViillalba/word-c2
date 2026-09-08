@@ -4,6 +4,36 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and
 the project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] — 2026-09-08
+
+### Added
+
+- **Cross-device sync.** A 16-character code — no account, no password — lifts
+  the learner record into a single Supabase row, so the phone and the laptop
+  show exactly the same progress. Every pass is pull → merge → push, and the
+  merge is a true union: idempotent and commutative, so syncing twice changes
+  nothing and neither device is privileged.
+- Sync runs on open, a few seconds after each graded answer, on tab focus, on
+  regaining connectivity and on leaving the app (`keepalive`), plus a manual
+  *Sincronizar* button in Ajustes. Offline never blocks: the record stays
+  pending and goes up on the next opportunity.
+- Ajustes gains a Sincronización section: create a code, link a device, copy the
+  code, see live status and unlink — which stops syncing without deleting a
+  thing, locally or in the cloud.
+- `scripts/supabase-setup.sql`: table plus two `security definer` functions, all
+  prefixed `wc2_` so this app can share one Supabase project with Cloze C2. The
+  anon key grants nothing on its own — RLS with no policies, no table access,
+  and both functions demand the sync code.
+- `docs/sync.md` with the five-minute setup, the merge rules and the threat
+  model.
+- 22 tests: merge algebra and the full round trip against a stand-in database,
+  including write conflicts, mid-flight answers and an unreachable server.
+
+### Changed
+
+- `store.js` now stamps `updatedAt` on every write, notifies listeners and can
+  swap in a whole merged record without re-stamping it.
+
 ## [1.0.0] — 2026-09-08
 
 First release. An installable, offline-first trainer for the Word Formation
@@ -76,4 +106,5 @@ section of the Cambridge C2 Proficiency and C1 Advanced exams.
 - Dependency-free static server and PowerShell icon generator.
 - GitHub Pages deployment workflow.
 
+[1.1.0]: https://github.com/MatiasViillalba/word-c2/releases/tag/v1.1.0
 [1.0.0]: https://github.com/MatiasViillalba/word-c2/releases/tag/v1.0.0

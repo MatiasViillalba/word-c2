@@ -71,8 +71,11 @@ requiere cuenta de desarrollador.
    direcciones, ocupa toda la pantalla y arranca instantánea.
 6. Para comprobarlo: activá el **modo avión** y abrila. Funciona igual.
 
-> El progreso se guarda en el dispositivo. No hay cuentas ni sincronización, y
-> la app no hace una sola petición de red después de instalarse.
+> El progreso se guarda en el dispositivo y la app funciona sin conexión. Si
+> querés el mismo avance en el celular y en la notebook, activá la
+> sincronización: Ajustes → Sincronización → *Activar*. Es un código de 16
+> caracteres, sin cuentas ni contraseñas — los detalles están en
+> [docs/sync.md](docs/sync.md).
 
 ## Publicar el repositorio
 
@@ -146,6 +149,7 @@ funcionamiento offline hay que usar `npm run serve`.
 | [docs/content-model.md](docs/content-model.md) | Formato de textos y ejercicios, y las doce reglas que se verifican |
 | [docs/word-list.md](docs/word-list.md) | La lista de origen: 598 derivaciones, contrato de cobertura |
 | [docs/design-system.md](docs/design-system.md) | Tokens, el par hueco + raíz, escala tipográfica y motion |
+| [docs/sync.md](docs/sync.md) | Sincronización entre dispositivos: puesta en marcha, reglas de fusión y seguridad |
 | [docs/ios-installation.md](docs/ios-installation.md) | Instalación en iPhone y sus límites |
 | [docs/deployment.md](docs/deployment.md) | GitHub Pages y publicación |
 | [docs/accessibility.md](docs/accessibility.md) | Contraste, tamaños táctiles, motion reducido |

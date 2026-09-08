@@ -1,6 +1,6 @@
 {
   "name": "word-c2",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Offline-first PWA for mastering the Word Formation section of the Cambridge C2 Proficiency and C1 Advanced exams.",
   "keywords": ["cambridge", "cpe", "cae", "c2-proficiency", "c1-advanced", "word-formation", "morphology", "english", "pwa", "offline", "spaced-repetition"],
@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test \"tests/*.test.mjs\"",
-    "test:unit": "node --test \"tests/content-integrity.test.mjs\" \"tests/srs.test.mjs\" \"tests/affixes.test.mjs\" \"tests/coverage.test.mjs\"",
+    "test:unit": "node --test \"tests/content-integrity.test.mjs\" \"tests/srs.test.mjs\" \"tests/affixes.test.mjs\" \"tests/coverage.test.mjs\" \"tests/sync.test.mjs\" \"tests/sync-cycle.test.mjs\"",
     "lint:syntax": "node scripts/check-syntax.mjs",
     "icons": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/make-icons.ps1",
     "serve": "node scripts/serve.mjs",
