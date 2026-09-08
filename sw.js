@@ -8,7 +8,7 @@
  * app is on the home screen.
  */
 
-const BUILD = '2026.09.07.1';
+const BUILD = '2026.09.08.1';
 const CACHE = 'word-c2-' + BUILD;
 
 const ASSETS = [
