@@ -32,13 +32,14 @@ Aunque tengas PostgreSQL o MySQL instalados, no alcanzan para esto:
 
 ### 1. El proyecto de Supabase
 
-Podés usar **el mismo proyecto que Cloze C2**. Todo lo que crea esta app va
-prefijado `wc2_`, así que las dos conviven sin tocarse: cada una tiene su tabla
-y su par de funciones.
+Word C2 tiene **su propio proyecto** (`lyxrfozxlkuzqkyavzks`), ya conectado en
+`sync-config.js`. Si alguna vez hiciera falta crear otro: <https://supabase.com>
+→ **New project**, elegí nombre, contraseña de la base (guardala, aunque la app
+no la usa) y la región más cercana (São Paulo).
 
-Si preferís uno nuevo: <https://supabase.com> → **New project**, elegí nombre,
-contraseña de la base (guardala, aunque la app no la usa) y la región más
-cercana (São Paulo).
+Todo lo que crea esta app va prefijado `wc2_`, así que también podría convivir
+en el mismo proyecto que Cloze C2 sin que se crucen: cada una tendría su tabla y
+su par de funciones.
 
 ### 2. Crear la tabla y las funciones
 
@@ -50,8 +51,9 @@ cercana (São Paulo).
 
 ### 3. Conectar la app
 
-Si reusás el proyecto de Cloze C2, [`assets/js/core/sync-config.js`](../assets/js/core/sync-config.js)
-ya viene con sus datos y no hay nada que hacer. Si creaste uno nuevo:
+[`assets/js/core/sync-config.js`](../assets/js/core/sync-config.js) ya viene con
+la URL y la clave `anon` del proyecto de Word C2, así que no hay nada que hacer.
+Si algún día cambiás de proyecto:
 
 1. En el panel, **Project Settings** → **API**. Copiá dos valores:
    - **Project URL**, del tipo `https://abcdefghijklm.supabase.co`
@@ -92,7 +94,7 @@ Listo. La notebook se queda con todo lo del celular, y de ahí en más los dos s
 mantienen al día solos.
 
 > El código de Word C2 es independiente del de Cloze C2: son dos progresos
-> distintos, aunque vivan en el mismo proyecto de Supabase.
+> distintos, en dos bases distintas.
 
 ---
 

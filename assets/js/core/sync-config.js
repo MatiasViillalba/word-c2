@@ -10,13 +10,14 @@
  * all table access from it and exposes only two functions, and both demand the
  * 16-character sync code, which lives on your devices and is never committed.
  *
- * The project can be shared with Cloze C2: the tables and functions used here
- * are prefixed `wc2_`, so the two apps never touch each other's rows.
+ * This app has its own Supabase project. The tables and functions it uses are
+ * prefixed `wc2_` all the same, so the schema could also live alongside Cloze
+ * C2 without the two ever touching each other's rows.
  *
  * Setup lives in docs/sync.md; the SQL is scripts/supabase-setup.sql.
  */
 window.WC2 = window.WC2 || {};
 window.WC2.SYNC_CONFIG = {
-  url: 'https://mhkvfqlmacpkfzcwfymx.supabase.co',
-  anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1oa3ZmcWxtYWNwa2Z6Y3dmeW14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg4NjU1OTgsImV4cCI6MjEwNDQ0MTU5OH0.kQzs7XzClk2rec4QstJlJs0r6OrsuKg1C7ZWbucN8nE'
+  url: 'https://lyxrfozxlkuzqkyavzks.supabase.co',
+  anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx5eHJmb3p4bGt1enFreWF2emtzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg4NzY4MjcsImV4cCI6MjEwNDQ1MjgyN30.p75ckOzVQeQxIjVeqMj6lE3Hpqse8Ff1WeNB3KXov6M'
 };
