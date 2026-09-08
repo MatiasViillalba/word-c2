@@ -80,6 +80,7 @@
   --safe-r: env(safe-area-inset-right, 0px);
   --topbar-h: 54px;
   --tabbar-h: 62px;
+  --exam-bar-h: 80px;   /* height of the fixed "Corregir" bar on the exam screen */
 }
 
 /* Text size from Ajustes: a continuous scale, nudged a step at a time by the

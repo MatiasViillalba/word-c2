@@ -255,13 +255,30 @@
 .ex-tools { display: flex; gap: 8px; margin-top: 14px; }
 .ex-tools .btn { flex: 1; }
 
+/* Docked to the viewport, not the scroll flow: "sticky" only engages once
+   scroll reaches it, so on a long passage the button sat mid-content, half
+   over the text, until you scrolled far enough. "fixed" pins it to the
+   bottom of the screen from the start, opaque, so the passage always scrolls
+   fully underneath it and never behind it. */
 .ex-actions {
-  position: sticky;
-  bottom: calc(var(--tabbar-h) + var(--safe-b) + 10px);
-  z-index: 35;
-  margin-top: 18px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  background: var(--ink-900);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -10px 26px rgba(0,0,0,.45);
+  padding-bottom: var(--safe-b);
 }
-.app[data-immersive="1"] .ex-actions { bottom: calc(var(--safe-b) + 14px); }
+.ex-actions__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 12px max(var(--pad), var(--safe-l)) 14px;
+}
+
+/* Reserved scroll space so the passage/review never renders behind the bar. */
+.ex-bottom-spacer { height: calc(var(--exam-bar-h) + var(--safe-b)); }
 
 .review-list { display: grid; gap: 10px; margin-top: 18px; }
 

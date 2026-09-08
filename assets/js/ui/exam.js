@@ -238,8 +238,13 @@
     const reviewHost = el('div');
     host.appendChild(reviewHost);
 
+    /* Reserves scroll room so the fixed bar below never sits on top of the
+       last line of the review; without it the button would cover text
+       instead of just docking below it. */
+    host.appendChild(el('div.ex-bottom-spacer'));
+
     const submit = el('button.btn.btn--primary.btn--block', { type: 'button', disabled: true, onclick: check }, 'Corregir');
-    host.appendChild(el('div.ex-actions', null, submit));
+    host.appendChild(el('div.ex-actions', null, el('div.ex-actions__inner', null, submit)));
 
     state.bar = bar;
     state.counter = counter;
