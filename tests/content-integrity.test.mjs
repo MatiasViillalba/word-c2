@@ -62,6 +62,19 @@ test('no passage asks for the same derivation twice', () => {
   });
 });
 
+/**
+ * `brief` is what the library screen shows before the learner commits to a
+ * text, so a stale one misdescribes the exercise. It is written by hand and
+ * therefore drifts; this pins it to the gaps it claims to summarise.
+ */
+test('each passage brief lists exactly the derivations it contains', () => {
+  passages.forEach((p) => {
+    const claimed = p.brief.split('·').map((s) => s.trim());
+    const actual = p.gaps.map((g) => g.root + '→' + g.a);
+    assert.deepEqual(claimed, actual, `${p.id}: brief does not match gaps[]`);
+  });
+});
+
 test('every item declares a stem, a pattern and an explanation', () => {
   passages.forEach((p) => {
     p.gaps.forEach((g) => {
