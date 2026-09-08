@@ -83,7 +83,7 @@ A handful of national libraries have begun to harvest the web {8}. Everything ou
   id: 'w19',
   title: 'Ratings and What They Measure',
   focus: 'Sufijos de medida y adjetivos de fiabilidad',
-  brief: 'ANALYSE→ANALYSTS · PROJECT→PROJECTIONS · DECEIVE→DECEPTIVE · REPRESENT→UNREPRESENTATIVE · AGGREGATE→AGGREGATED · WEIGH→WEIGHTING · SIGNIFY→SIGNIFICANCE · CAUTION→CAUTIONARY',
+  brief: 'ANALYSE→ANALYSTS · PROJECT→PROJECTIONS · DECEIVE→DECEPTIVE · REPRESENT→UNREPRESENTATIVE · AGGREGATE→AGGREGATING · WEIGH→WEIGHTING · SIGNIFY→SIGNIFICANCE · CAUTION→CAUTIONARY',
   text: `Audience figures are a currency, and like any currency their value depends on collective agreement rather than on anything intrinsic. {1} who work with them daily are noticeably more careful about what they claim than the executives who quote them.
 
 The {2} published each week rest on a panel of a few thousand households, scaled up. The arithmetic is sound. What is {3} is the presentation: a figure given to the nearest thousand implies a precision the method cannot support.
