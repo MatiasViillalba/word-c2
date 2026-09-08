@@ -82,7 +82,10 @@
     { id: 'multi-',   tag: 'MULTI-',   m: 'multi',   g: 'pre', label: 'Múltiple',                    note: 'MULTILINGUAL, MULTINATIONAL.' },
     { id: 'auto-',    tag: 'AUTO-',    m: 'auto',    g: 'pre', label: 'Por sí mismo',                note: 'AUTOMATION, AUTOBIOGRAPHY.' },
     { id: 'micro-',   tag: 'MICRO-',   m: 'micro',   g: 'pre', label: 'Pequeño',                     note: 'MICROBIAL, MICROSCOPIC.' },
-    { id: 'with-',    tag: 'WITH-',    m: 'with',    g: 'pre', label: 'Atrás, en contra',            note: 'WITHDRAWN, WITHHOLD, WITHSTAND.' }
+    { id: 'with-',    tag: 'WITH-',    m: 'with',    g: 'pre', label: 'Atrás, en contra',            note: 'WITHDRAWN, WITHHOLD, WITHSTAND.' },
+    /* `manual` keeps a bare "a" out of the detector — it would swallow half the
+       bank — while leaving the entry available to items that declare it. */
+    { id: 'a-',       tag: 'A-',       m: 'a',       g: 'pre', manual: true, label: 'Estado o manera (arcaizante)', note: 'APACE, ABREAST, ASLEEP, AFLOAT. Poco productivo hoy, pero aparece en registro literario.' }
   ];
 
   /* ----------------------------------------------------------- Suffixes --- */
@@ -114,6 +117,7 @@
     { id: '-ry',     tag: '-RY',     m: 'ry',     g: 'noun',  label: 'Conjunto o actividad',        note: 'FORESTRY, RIVALRY, JEWELLERY.' },
     { id: '-ics',    tag: '-ICS',    m: 'ics',    g: 'noun',  label: 'Disciplina o campo',          note: 'DYNAMICS, ETHICS, ECONOMICS, LINGUISTICS.' },
     { id: '-th',     tag: '-TH',     m: 'th',     g: 'noun',  label: 'Cualidad, con cambio de vocal', note: 'DEEP → DEPTH, LONG → LENGTH, STRONG → STRENGTH, WIDE → WIDTH. Irregular y muy examinable.' },
+    { id: '-ty',     tag: '-TY',     m: 'ty',     g: 'noun',  label: 'Cualidad (variante corta de -ITY)', note: 'CERTAINTY, LOYALTY, FRAILTY, SUBTLETY, SAFETY, NOVELTY. Sin la -I- que lleva -ITY.' },
 
     /* --- Nouns: people and agents ------------------------------------- */
     { id: '-ist',    tag: '-IST',    m: 'ist',    g: 'agent', label: 'Persona: profesión o doctrina', note: 'LYRICISTS, ECOLOGISTS, ANALYSTS, ELITIST, MODERNIST.' },
@@ -175,28 +179,41 @@
   PREFIXES.concat(SUFFIXES).forEach((a) => { INDEX[a.id] = a; });
 
   const COMPOUND = { id: 'compound', tag: 'COMPUESTO', g: 'other', kind: 'other',
-    label: 'Palabra compuesta', note: 'Dos palabras plenas soldadas en una: PLAYWRIGHT, WILDLIFE, DEADLINE, FIREARMS, GATEKEEPERS.' };
+    label: 'Palabra compuesta', note: 'Dos palabras plenas soldadas en una: PLAYWRIGHT, WILDLIFE, DEADLINE, FIREARMS, GATEKEEPERS, BACKSTAGE.' };
   const INTERNAL = { id: 'internal', tag: 'RAÍZ', g: 'other', kind: 'other',
-    label: 'Cambio interno de la raíz', note: 'La vocal o la consonante de la raíz cambia: DEEP → DEPTH, LONG → LENGTH, WISE → WISDOM, HIGH → HEIGHT.' };
+    label: 'Cambio interno de la raíz', note: 'La vocal o la consonante de la raíz cambia: DEEP → DEPTH, LONG → LENGTH, WISE → WISDOM, CONCEIVE → CONCEPT, REASON → RATIONALE.' };
+  /* Part 3 does sometimes answer with the stem itself, only inflected: the
+     plural of the given noun, or a tense of the given verb. It is a real answer
+     type and it deserves its own label rather than being filed as irregular. */
+  const INFLECTION = { id: 'inflection', tag: 'FLEXIÓN', g: 'other', kind: 'other',
+    label: 'Solo flexión de la raíz', note: 'La respuesta es la raíz misma en plural o en otra forma verbal: MODERATE → MODERATES, ENCOUNTER → ENCOUNTERS. Sin afijo derivativo.' };
   INDEX.compound = COMPOUND;
   INDEX.internal = INTERNAL;
+  INDEX.inflection = INFLECTION;
 
   PREFIXES.forEach((p) => { p.kind = 'prefix'; });
   SUFFIXES.forEach((s) => { s.kind = 'suffix'; });
 
   /* ---------------------------------------------------------- Analysis --- */
 
-  /* Inflections that ride on top of a derivation without being one. */
+  /**
+   * Inflections that ride on top of a derivation without being one.
+   *
+   * Order is load-bearing. `-ies` has to be tested before the generic plural
+   * `-s`, or VULNERABILITIES reduces to "vulnerabilitie" instead of
+   * "vulnerability" and the -IBILITY suffix underneath it is never seen.
+   */
   function stripInflection(word) {
+    if (/[^aeiou]ies$/.test(word)) return word.slice(0, -3) + 'y';
+    if (/(ch|sh|x|z|s)es$/.test(word)) return word.slice(0, -2);
     if (/[^s]s$/.test(word) && !/(ss|us|is|ous)$/.test(word)) return word.slice(0, -1);
-    if (/ies$/.test(word)) return word.slice(0, -3) + 'y';
-    if (/es$/.test(word) && /(ch|sh|x|z|ss)es$/.test(word)) return word.slice(0, -2);
     return null;
   }
 
   function findPrefix(ans, root) {
     for (let i = 0; i < PREFIX_ORDER.length; i++) {
       const p = PREFIX_ORDER[i];
+      if (p.manual) continue;
       if (ans.indexOf(p.m) !== 0) continue;
       if (root.indexOf(p.m) === 0) continue;          /* the stem already had it */
       if (ans.length - p.m.length < 3) continue;
@@ -214,6 +231,7 @@
       const word = candidates[c];
       for (let i = 0; i < SUFFIX_ORDER.length; i++) {
         const s = SUFFIX_ORDER[i];
+        if (s.manual) continue;
         const at = word.length - s.m.length;
         if (at < 3) continue;
         if (word.slice(at) !== s.m) continue;
