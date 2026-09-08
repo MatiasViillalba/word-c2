@@ -59,7 +59,7 @@ None of this argues for eating badly. It argues for treating claims about {7} wi
   id: 'w23',
   title: 'The Placebo Problem',
   focus: 'Sufijos de método y adjetivos de fiabilidad',
-  brief: 'THERAPY→THERAPEUTIC · MEASURE→MEASURABLE · SUBJECT→SUBJECTIVE · REPLICATE→REPLICATION · CONCLUDE→CONCLUSIVELY · METHOD→METHODOLOGICAL · EXPECT→EXPECTATION · PSYCHOLOGY→PSYCHOLOGICAL',
+  brief: 'THERAPY→THERAPEUTIC · MEASURE→MEASURABLE · SUBJECT→SUBJECTIVE · REPLICATE→REPLICATION · EXPECT→EXPECTATION · PSYCHOLOGY→PSYCHOLOGICAL · CONCLUDE→CONCLUSIVELY · METHOD→METHODOLOGICAL',
   text: `A sugar pill has no {1} properties whatever, and it reliably produces {2} changes in reported pain, in sleep quality and, less often, in blood pressure. This is not a failure of the patients; it is a real effect with a real mechanism.
 
 The trouble it causes is methodological. Any outcome that is {3} — anything the patient reports rather than the instrument records — carries a placebo component that cannot be separated out except by blinding, and blinding is impossible for surgery and difficult for talking therapies.
@@ -83,7 +83,7 @@ Whether the phenomenon is best described as {6} rather than physiological is a q
   id: 'w24',
   title: 'Ageing Without Decline',
   focus: 'Sufijos de estado y prefijos de grado',
-  brief: 'COGNITION→COGNITIVE · DECLINE→DECLINING · VITAL→VITALITY · HERED→HEREDITARY · MOBILE→MOBILITY · FRAIL→FRAILTY · NOURISH→UNDERNOURISHMENT · REVERSE→REVERSIBLE',
+  brief: 'COGNITION→COGNITIVE · DECLINE→DECLINING · VITAL→VITALITY · HEREDITY→HEREDITARY · MOBILE→MOBILITY · FRAIL→FRAILTY · NOURISH→UNDERNOURISHMENT · REVERSE→REVERSIBLE',
   text: `The assumption that {1} decline is an inevitable feature of old age has not survived contact with the data. Average performance falls, certainly; but the average conceals a spread so wide that it is close to useless as a description of any individual.
 
 What predicts a {2} trajectory is not chronological age but a cluster of other things: hearing loss, isolation, inactivity, and, with striking consistency, poor sleep. {3} in the ninth decade correlates far more strongly with these than with anything {4}.

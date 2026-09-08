@@ -83,7 +83,7 @@ Some of the machinery is now {6} in a way that its authors would recognise. The 
   id: 'w29',
   title: 'The Last Bus at Half Past Six',
   focus: 'Sufijos de servicio y adjetivos de acceso',
-  brief: 'MOBILE→MOBILITY · ISOLATE→ISOLATION · VIABLE→VIABILITY · SUBSIDY→SUBSIDISED · ACCESS→INACCESSIBLE · DEPEND→DEPENDENT · PROVIDE→PROVISION · EQUITY→INEQUITABLE',
+  brief: 'MOBILE→MOBILITY · ISOLATE→ISOLATION · ACCESS→INACCESSIBLE · VIABLE→VIABILITY · SUBSIDY→SUBSIDISED · DEPEND→DEPENDENT · PROVIDE→PROVISION · EQUITY→INEQUITABLE',
   text: `Rural {1} collapsed quietly, over about thirty years, and it collapsed in a way that is almost invisible from a city. There was no closure announcement. Services were simply thinned until the last bus left at half past six, at which point the route became useless to anyone with a job.
 
 The resulting {2} falls unevenly. A household with two cars notices nothing. A teenager, a person who cannot drive, or anyone over eighty finds that the nearest hospital has become effectively {3}.
@@ -107,7 +107,7 @@ Where the population is {6} on a single daily service, the case for public {7} i
   id: 'w30',
   title: 'Nobody Designs a Slum',
   focus: 'Sufijos de proceso y adjetivos de crecimiento',
-  brief: 'INHABIT→INHABITANTS · FORMAL→INFORMAL · TENURE→TENURE · SANITARY→INSANITARY · INCREMENT→INCREMENTAL · REGULATE→REGULATION · RESOURCE→RESOURCEFUL · DEMOLISH→DEMOLITION',
+  brief: 'INHABIT→INHABITANTS · FORMAL→INFORMAL · TENANT→TENURE · SANITARY→INSANITARY · INCREMENT→INCREMENTAL · REGULATE→REGULATION · RESOURCE→RESOURCEFUL · DEMOLISH→DEMOLITION',
   text: `A third of the world's urban {1} live in settlements that were never planned by anybody. The term of art is {2} housing, and it covers everything from a shack on a rubbish tip to a four-storey brick building with a satellite dish.
 
 What these places have in common is not poverty or squalor but insecurity of {3}. A household that expects to be cleared next year does not install drainage, which is why so many such districts remain {4} long after their residents could afford otherwise.

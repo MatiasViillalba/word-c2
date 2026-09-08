@@ -68,11 +68,13 @@ test('no passage asks for the same derivation twice', () => {
  * therefore drifts; this pins it to the gaps it claims to summarise.
  */
 test('each passage brief lists exactly the derivations it contains', () => {
-  passages.forEach((p) => {
-    const claimed = p.brief.split('·').map((s) => s.trim());
-    const actual = p.gaps.map((g) => g.root + '→' + g.a);
-    assert.deepEqual(claimed, actual, `${p.id}: brief does not match gaps[]`);
-  });
+  /* Collected rather than asserted one by one: a single deepEqual would stop at
+     the first offender and hide the rest, which turns one fix into ten runs. */
+  const wrong = passages
+    .filter((p) => p.brief.split('·').map((s) => s.trim()).join('|')
+                !== p.gaps.map((g) => g.root + '→' + g.a).join('|'))
+    .map((p) => p.id);
+  assert.deepEqual(wrong, [], `briefs out of step with gaps[]: ${wrong.join(', ')}`);
 });
 
 test('every item declares a stem, a pattern and an explanation', () => {
