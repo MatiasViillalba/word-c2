@@ -39,6 +39,7 @@ WC2.content.registerDrills([
 { id: 'd0170', root: 'LIVE', a: 'OUTLIVED', p: 'OUT- + -ED', src: 'Ampliación C2', s: 'The joke has long {1} its usefulness.', tip: 'OUTLIVE = sobrevivir a, durar más que. Aquí en sentido figurado.' },
 { id: 'd0171', root: 'BREAK', a: 'OUTBREAK', p: 'OUT- sobre verbo', src: 'Ampliación C2', s: 'The {1} was traced to a single contaminated well.', tip: 'OUTBREAK = brote. Sustantivo compuesto con el acento en OUT.' },
 { id: 'd0172', root: 'LOOK', a: 'OUTLOOK', p: 'OUT- sobre verbo', src: 'Ampliación C2', s: 'The economic {1} for the coming year has darkened considerably.', tip: 'OUTLOOK = perspectiva, panorama. Compará con OVERLOOK, que es otra cosa entera.' },
+{ id: 'd0989', root: 'PUT', a: 'OUTPUT', p: 'Compuesto OUT + PUT', src: 'Ampliación C2', s: 'Industrial {1} recovered more slowly than employment did.', tip: 'OUT + PUT = producción, rendimiento. El acento va en OUT, no en PUT.' },
 
 /* ---- UP- : hacia arriba, mejora ------------------------------------------- */
 { id: 'd0173', root: 'GRADE', a: 'UPGRADE', p: 'UP- sobre sustantivo', src: 'Prefijos de grado', s: 'The station is due a substantial {1} before the line reopens.', tip: 'UPGRADE = mejora. Sustantivo y verbo con la misma forma; en sustantivo el acento va en UP.' },
