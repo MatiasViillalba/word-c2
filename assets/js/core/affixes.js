@@ -151,7 +151,11 @@
     { id: '-ish',    tag: '-ISH',    m: 'ish',    g: 'adj',   label: 'Algo así, con matiz atenuado', note: 'FADDISH, CHILDISH, REDDISH. Suele añadir un juicio ligeramente negativo.' },
     { id: '-worthy', tag: '-WORTHY', m: 'worthy', g: 'adj',   label: 'Digno de',                    note: 'TRUSTWORTHY, NEWSWORTHY, NOTEWORTHY.' },
     { id: '-proof',  tag: '-PROOF',  m: 'proof',  g: 'adj',   label: 'A prueba de',                 note: 'WATERPROOF, FOOLPROOF, SOUNDPROOF.' },
-    { id: '-ant/adj',tag: '-ANT',    m: 'ant',    g: 'adj',   label: 'Adjetivo de cualidad',        note: 'PREVALENT, ABUNDANT, SIGNIFICANT, DEVIANT.' },
+    /* -ANT and -ENT build both agents and adjectives from the same stems, so the
+       detector cannot tell APPLICANT from ABUNDANT by shape alone. It defaults
+       to the agent reading; adjectives declare these ids explicitly. */
+    { id: '-ant/adj',tag: '-ANT',    m: 'ant',    g: 'adj', manual: true, label: 'Adjetivo de cualidad', note: 'ABUNDANT, SIGNIFICANT, DEVIANT, RELUCTANT. Mismo sufijo que el agente APPLICANT, distinta función.' },
+    { id: '-ent/adj',tag: '-ENT',    m: 'ent',    g: 'adj', manual: true, label: 'Adjetivo de cualidad', note: 'PREVALENT, DIVERGENT, PERSISTENT, COHERENT. El sustantivo correspondiente acaba en -ENCE.' },
     { id: '-ing',    tag: '-ING',    m: 'ing',    g: 'adj',   label: 'Participio activo: lo que causa', note: 'DEPRESSING, DEMANDING, ENDURING, INTOXICATING. Compará BORING (cosa) con BORED (persona).' },
     { id: '-ed',     tag: '-ED',     m: 'ed',     g: 'adj',   label: 'Participio pasivo: lo que se siente', note: 'ACCUSTOMED, ACCLAIMED, DISCOURAGED, CRAFTED.' },
     { id: '-y',      tag: '-Y',      m: 'y',      g: 'adj',   label: 'Que tiene o parece',          note: 'WEIGHTY, HEALTHY, RISKY, WEALTHY.' },
