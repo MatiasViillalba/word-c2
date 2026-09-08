@@ -59,6 +59,7 @@ WC2.content.registerDrills([
 { id: 'd0379', root: 'MARRY', a: 'MARRIAGE', p: '-AGE sobre verbo', src: 'Ampliación C2', s: 'The {1} lasted forty-one years.', tip: 'MARRY → MARRIAGE. La Y pasa a I ante -AGE.' },
 { id: 'd0380', root: 'MILE', a: 'MILEAGE', p: '-AGE sobre sustantivo', src: 'Ampliación C2', s: 'He got considerable political {1} out of the affair.', tip: 'MILE → MILEAGE (conserva la E). En sentido figurado: provecho, rédito.' },
 { id: 'd0381', root: 'PERCENT', a: 'PERCENTAGE', p: '-AGE sobre sustantivo', src: 'Ampliación C2', s: 'Only a small {1} of applicants make it to interview.', tip: 'PERCENT → PERCENTAGE. Se dice A SMALL PERCENTAGE OF.' },
-{ id: 'd0382', root: 'ADVANTAGE', a: 'ADVANTAGEOUS', p: '-EOUS sobre sustantivo', src: 'Ampliación C2', s: 'The exchange rate proved unexpectedly {1} to exporters.', tip: 'ADVANTAGE → ADVANTAGEOUS. La E se conserva para que la G suene suave.' }
+{ id: 'd0382', root: 'ADVANTAGE', a: 'ADVANTAGEOUS', p: '-EOUS sobre sustantivo', src: 'Ampliación C2', s: 'The exchange rate proved unexpectedly {1} to exporters.', tip: 'ADVANTAGE → ADVANTAGEOUS. La E se conserva para que la G suene suave.' },
+{ id: 'd0988', root: 'USE', a: 'USAGE', p: '-AGE sobre sustantivo', src: 'Ampliación C2', s: 'A dictionary of this kind records {1} rather than prescribing it.', tip: 'USE → USAGE = el uso real de la lengua. Se pierde la E ante -AGE.' }
 
 ]);

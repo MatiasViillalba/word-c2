@@ -72,6 +72,8 @@ WC2.content.registerDrills([
 { id: 'd0333', root: 'INVADE', a: 'INVASION', p: '-DE → -SION', src: 'Ampliación C2', s: 'The {1} of non-native species has altered the lake entirely.', tip: 'INVADE → INVASION. La D pasa a S.' },
 { id: 'd0334', root: 'OMIT', a: 'OMISSION', p: '-MIT → -MISSION', src: 'Ampliación C2', s: 'The {1} of any mention of cost was surely deliberate.', tip: 'OMIT → OMISSION. Una M en el verbo, dos S en el sustantivo.' },
 { id: 'd0335', root: 'CONCEIVE', a: 'CONCEPTION', p: '-CEIVE → -CEPTION', src: 'Ampliación C2', s: 'Their {1} of the city is closer to a village than a capital.', tip: 'CONCEIVE → CONCEPTION. La familia -CEIVE hace -CEPTION: RECEIVE, PERCEIVE, DECEIVE.' },
-{ id: 'd0336', root: 'PERCEIVE', a: 'PERCEPTION', p: '-CEIVE → -CEPTION', src: 'Ampliación C2', s: 'Public {1} of the risk bears little relation to the data.', tip: 'PERCEIVE → PERCEPTION. Misma familia que CONCEPTION y DECEPTION.' }
+{ id: 'd0336', root: 'PERCEIVE', a: 'PERCEPTION', p: '-CEIVE → -CEPTION', src: 'Ampliación C2', s: 'Public {1} of the risk bears little relation to the data.', tip: 'PERCEIVE → PERCEPTION. Misma familia que CONCEPTION y DECEPTION.' },
+{ id: 'd0986', root: 'PUBLISH', a: 'PUBLICATION', p: '-ISH → -ICATION', src: 'Ampliación C2', s: 'The journal accepted the paper but delayed {1} for a year.', tip: 'PUBLISH → PUBLICATION. Se pierde el -SH y entra -ICATION, como en ABOLISH → ABOLITION.' },
+{ id: 'd0987', root: 'CONFUSE', a: 'CONFUSION', p: '-SE → -SION', src: 'Ampliación C2', s: 'There was some {1} about which entrance to use.', tip: 'CONFUSE → CONFUSION. Con raíces en -SE la S ya está puesta.' }
 
 ]);

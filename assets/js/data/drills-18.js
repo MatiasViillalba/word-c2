@@ -68,6 +68,7 @@ WC2.content.registerDrills([
 { id: 'd0865', root: 'INTEREST', a: 'INTERESTED', p: '-ED frente a -ING', src: 'Contraste activo y pasivo', s: 'Anyone {1} in the subject should start with the 1958 edition.', tip: 'INTERESTED = la persona que siente interés. INTERESTING = la cosa que lo provoca.' },
 { id: 'd0866', root: 'CONCERN', a: 'CONCERNING', p: '-ED frente a -ING', src: 'Contraste activo y pasivo', s: 'The trend in the youngest age group is particularly {1}.', tip: 'CONCERNING = preocupante (la cosa). CONCERNED = preocupado (la persona).' },
 { id: 'd0867', root: 'EXHAUST', a: 'EXHAUSTING', p: '-ED frente a -ING', src: 'Contraste activo y pasivo', s: 'The journey by road is long and thoroughly {1}.', tip: 'EXHAUSTING = agotador (la cosa). EXHAUSTED = agotado (la persona). No confundir con EXHAUSTIVE = exhaustivo.' },
-{ id: 'd0868', root: 'DISTURB', a: 'DISTURBED', p: '-ED frente a -ING', src: 'Contraste activo y pasivo', s: 'The nesting birds must not be {1} before July.', tip: 'DISTURBED = molestado, alterado. DISTURBING = inquietante.' }
+{ id: 'd0868', root: 'DISTURB', a: 'DISTURBED', p: '-ED frente a -ING', src: 'Contraste activo y pasivo', s: 'The nesting birds must not be {1} before July.', tip: 'DISTURBED = molestado, alterado. DISTURBING = inquietante.' },
+{ id: 'd0990', root: 'CONFOUND', a: 'CONFOUNDING', p: '-ING participial', src: 'Ampliación C2', s: 'The study controlled for every {1} factor the authors could name.', tip: 'CONFOUND → CONFOUNDING. En estadística, una variable que confunde el resultado.' }
 
 ]);

@@ -68,6 +68,7 @@ WC2.content.registerDrills([
 { id: 'd0287', root: 'CONSIDER', a: 'CONSIDERATION', p: 'Raíz + -ATION', src: 'Ampliación C2', s: 'After long {1} the committee rejected all three bids.', tip: 'CONSIDER → CONSIDERATION. TAKE something INTO CONSIDERATION es colocación fija.' },
 { id: 'd0288', root: 'RECOMMEND', a: 'RECOMMENDATIONS', p: 'Raíz + -ATION', src: 'Ampliación C2', s: 'Only two of the twelve {1} were ever implemented.', tip: 'RECOMMEND → RECOMMENDATION. Una C y dos M: el error más común de la palabra.' },
 { id: 'd0289', root: 'IMPLEMENT', a: 'IMPLEMENTATION', p: 'Raíz + -ATION', src: 'Ampliación C2', s: 'The {1} of the new system slipped by two quarters.', tip: 'IMPLEMENT → IMPLEMENTATION = puesta en marcha.' },
-{ id: 'd0290', root: 'ILLUMINATE', a: 'ILLUMINATION', p: '-ATE → -ATION', src: 'Ampliación C2', s: 'The manuscript {1} is the finest of its period.', tip: 'ILLUMINATE → ILLUMINATION. Doble L, una sola M y una sola N.' }
+{ id: 'd0290', root: 'ILLUMINATE', a: 'ILLUMINATION', p: '-ATE → -ATION', src: 'Ampliación C2', s: 'The manuscript {1} is the finest of its period.', tip: 'ILLUMINATE → ILLUMINATION. Doble L, una sola M y una sola N.' },
+{ id: 'd0985', root: 'ISOLATE', a: 'ISOLATION', p: '-ATE → -ATION', src: 'Ampliación C2', s: 'Rural {1} is felt most keenly by those who cannot drive.', tip: 'ISOLATE → ISOLATION. Los verbos en -ATE pierden la E ante -ION.' }
 
 ]);

@@ -93,6 +93,7 @@ WC2.content.registerDrills([
 /* ---- Cuando la respuesta es sólo una flexión ----------------------------- */
 { id: 'd0981', root: 'MODERATE', a: 'MODERATES', af: 'inflection', p: 'Flexión: plural del sustantivo', src: 'Flexión sin derivación', s: '{1} on both sides were quickly sidelined.', tip: 'A veces el Part 3 sólo pide el plural de la palabra dada. MODERATE como sustantivo = un moderado.' },
 { id: 'd0982', root: 'ENCOUNTER', a: 'ENCOUNTERS', af: 'inflection', p: 'Flexión: plural del sustantivo', src: 'Flexión sin derivación', s: 'Her {1} with the composer are described in the third chapter.', tip: 'ENCOUNTER ya es sustantivo: sólo hace falta el plural.' },
-{ id: 'd0983', root: 'COMPROMISE', a: 'COMPROMISES', af: 'inflection', p: 'Flexión: plural del sustantivo', src: 'Flexión sin derivación', s: 'The final text involved {1} that satisfied nobody.', tip: 'COMPROMISE es sustantivo y verbo. Aquí el plural del sustantivo: concesiones mutuas.' }
+{ id: 'd0983', root: 'COMPROMISE', a: 'COMPROMISES', af: 'inflection', p: 'Flexión: plural del sustantivo', src: 'Flexión sin derivación', s: 'The final text involved {1} that satisfied nobody.', tip: 'COMPROMISE es sustantivo y verbo. Aquí el plural del sustantivo: concesiones mutuas.' },
+{ id: 'd0991', root: 'INCENTIVE', a: 'INCENTIVES', af: 'inflection', p: 'Flexión: plural del sustantivo', src: 'Flexión sin derivación', s: 'The tax code creates {1} that nobody intended.', tip: 'Sólo el plural del sustantivo dado. Compará con DISINCENTIVES, que sí lleva prefijo.' }
 
 ]);
