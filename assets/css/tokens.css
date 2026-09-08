@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Design tokens — "Cobalt" dark theme
+   Deep blue-black canvas + electric cobalt. Everything else derives from here.
+   ========================================================================== */
+
+:root {
+  /* --- Surfaces --------------------------------------------------------- */
+  --ink-1000: #04060B;
+  --ink-900:  #070A12;
+  --ink-800:  #0C111C;
+  --ink-700:  #121826;
+  --ink-600:  #18202F;
+  --ink-500:  #212B3D;
+
+  --surface:        rgba(255, 255, 255, 0.045);
+  --surface-strong: rgba(255, 255, 255, 0.075);
+  --surface-sunken: rgba(0, 0, 0, 0.38);
+  --line:           rgba(140, 180, 255, 0.11);
+  --line-strong:    rgba(140, 180, 255, 0.20);
+
+  /* --- Ink -------------------------------------------------------------- */
+  --fg:      #F2F5FA;
+  --fg-soft: #C3CCDC;
+  --fg-dim:  #8794AA;
+  --fg-mute: #5D697E;
+
+  /* --- Brand ------------------------------------------------------------ */
+  --azure-100: #DCEAFF;
+  --azure-200: #AFCFFF;
+  --azure-300: #7FB2FF;
+  --azure-400: #4E93FF;
+  --azure-500: #2172F0;
+  --azure-600: #0E56DA;
+  --azure-700: #0A42AB;
+
+  --azure-grad:      linear-gradient(135deg, #62A6FF 0%, #2172F0 48%, #0B4FD0 100%);
+  --azure-grad-soft: linear-gradient(135deg, rgba(98,166,255,.22), rgba(11,79,208,.10));
+  --azure-ring:      rgba(33, 114, 240, 0.35);
+
+  /* --- Semantic --------------------------------------------------------- */
+  --good:      #2FD39C;
+  --good-soft: rgba(47, 211, 156, .14);
+  --bad:       #FF5470;
+  --bad-soft:  rgba(255, 84, 112, .14);
+  --warn:      #FFC24B;
+
+  /* --- Radii ------------------------------------------------------------ */
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+  --r-pill: 999px;
+
+  /* --- Elevation -------------------------------------------------------- */
+  --sh-soft:  0 2px 10px rgba(0,0,0,.5);
+  --sh-card:  0 18px 40px -22px rgba(0,0,0,.92);
+  --sh-glow:  0 14px 44px -14px rgba(33,114,240,.6);
+  --sh-glow-sm: 0 8px 22px -10px rgba(33,114,240,.65);
+
+  /* --- Motion ----------------------------------------------------------- */
+  --ease-out:    cubic-bezier(.22, 1, .36, 1);
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+  --t-fast: 140ms;
+  --t-med:  260ms;
+  --t-slow: 460ms;
+
+  /* --- Type ------------------------------------------------------------- */
+  --font-ui: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+             "Segoe UI Variable", "Segoe UI", Inter, system-ui, sans-serif;
+  --font-read: "New York", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+
+  /* --- Layout ----------------------------------------------------------- */
+  --pad: 20px;
+  --maxw: 720px;
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-l: env(safe-area-inset-left, 0px);
+  --safe-r: env(safe-area-inset-right, 0px);
+  --topbar-h: 54px;
+  --tabbar-h: 62px;
+}
+
+/* Text size from Ajustes: a continuous scale, nudged a step at a time by the
+   two A buttons. `--read-scale` is written straight onto <html> by settings.js
+   and everything readable derives from it. */
+:root {
+  --read-scale: 1;
+  --read-size: calc(18.5px * var(--read-scale));
+  --read-lh: calc(1.62 + .2 / var(--read-scale));
+  --drill-size: calc(19.5px * var(--read-scale));
+  --explain-size: calc(13.5px * var(--read-scale));
+  --root-size: calc(11.5px * var(--read-scale));
+}
+
+/* Reduced-motion users get a calm, static canvas. */
+@media (prefers-reduced-motion: reduce) {
+  :root { --t-fast: 0ms; --t-med: 0ms; --t-slow: 0ms; }
+}
