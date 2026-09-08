@@ -11,7 +11,7 @@ WC2.content.registerPassages([
   id: 'w06',
   title: 'The Return of the Beaver',
   focus: 'Sustantivos de proceso y adjetivos científicos',
-  brief: 'INTRODUCE→REINTRODUCTION · ECOLOGY→ECOLOGICAL · PREDATE→PREDATORS · HABIT→HABITATS · CONTROVERSY→CONTROVERSIAL · MANAGE→MANAGEMENT · BENEFIT→BENEFICIAL · SCEPTIC→SCEPTICISM',
+  brief: 'INTRODUCE→REINTRODUCTION · ECOLOGY→ECOLOGICAL · PREDATE→PREDATORS · HABIT→HABITATS · CONTROVERSY→CONTROVERSIAL · MANAGE→MANAGEMENT · BENEFIT→BENEFITS · SCEPTIC→SCEPTICISM',
   text: `The {1} of beavers to British rivers, first attempted in Scotland and now under way across a dozen catchments, has produced results that surprised almost everybody involved. The {2} effects run far beyond the animal itself.
 
 A beaver dam slows water, and slowed water deposits sediment, cools, and fills with insects. Fish that had abandoned a stretch of river return within two seasons. Even the absence of large {3} in the modern landscape, so often treated as a fatal objection to rewilding, has mattered less than expected: the population regulates itself once the best {4} are occupied.
@@ -26,7 +26,7 @@ The remaining {8} is now less about ecology than about who pays for the inconven
     { n: 4, root: 'HABIT', a: 'HABITATS', p: 'Raíz latina compartida', tip: 'HABITAT = hábitat. Comparte raíz con HABIT pero es otra palabra; el plural es regular.' },
     { n: 5, root: 'CONTROVERSY', a: 'CONTROVERSIAL', p: '-Y → -IAL', tip: 'CONTROVERSY → CONTROVERSIAL. Adjetivo tras «made the policy less».' },
     { n: 6, root: 'MANAGE', a: 'MANAGEMENT', p: '-MENT sobre verbo', tip: 'Tras «the» y antes de «of» hace falta sustantivo. La E de MANAGE se conserva.' },
-    { n: 7, root: 'BENEFIT', a: 'BENEFITS', p: 'Flexión de plural', tip: 'Aquí basta el plural del sustantivo dado: «the flood benefits». La T no se dobla.' },
+    { n: 7, root: 'BENEFIT', a: 'BENEFITS', af: 'inflection', p: 'Flexión: plural del sustantivo', tip: 'A veces el Part 3 sólo pide el plural de la palabra dada. La T no se dobla: BENEFITS, no *benefitts.' },
     { n: 8, root: 'SCEPTIC', a: 'SCEPTICISM', p: '-ISM sobre sustantivo', tip: 'SCEPTIC → SCEPTICISM. En británico con SC-; en americano, SKEPTICISM.' }
   ]
 },
@@ -107,7 +107,7 @@ Several {6} agencies have now begun deliberate burning in the cooler months, whi
   id: 'w10',
   title: 'A Language of Extinction',
   focus: 'Sufijos abstractos y adjetivos de amenaza',
-  brief: 'EXTINCT→EXTINCTION · THREAT→THREATENED · CONSERVE→CONSERVATION · PRIOR→PRIORITISE · CHARM→CHARISMATIC · INHABIT→INHABITANTS · SURVIVE→SURVIVAL · MEASURE→IMMEASURABLE',
+  brief: 'EXTINCT→EXTINCTION · THREAT→THREATENED · CONSERVE→CONSERVATION · PRIOR→PRIORITISE · ICON→ICONIC · INHABIT→INHABITANTS · SURVIVE→SURVIVAL · MEASURE→IMMEASURABLY',
   text: `Conservation has a vocabulary problem. The word {1} suggests a single dramatic event, whereas what actually happens is a slow contraction of range that nobody notices until it is complete.
 
 The official categories do not help. A species listed as {2} may be down to eleven individuals or to eleven thousand, and the public reads the label rather than the number. {3} funding follows attention, and attention follows charisma, which is why every campaign is obliged to {4} the same handful of large mammals.
@@ -120,7 +120,7 @@ Nobody proposes abandoning the tiger. But the {7} of a soil fungus with no commo
     { n: 2, root: 'THREAT', a: 'THREATENED', p: '-EN + -ED', tip: 'THREAT → THREATEN → THREATENED. El verbo se forma con -EN antes del participio.' },
     { n: 3, root: 'CONSERVE', a: 'CONSERVATION', p: '-VE → -VATION', tip: 'CONSERVE → CONSERVATION. Sustantivo antepuesto a «funding».' },
     { n: 4, root: 'PRIOR', a: 'PRIORITISE', alt: ['PRIORITIZE'], p: '-ITY + -ISE', tip: 'PRIOR → PRIORITY → PRIORITISE. Tras «obliged to» hace falta infinitivo.' },
-    { n: 5, root: 'CHARM', a: 'CHARISMATIC', p: 'Raíz griega alterna', tip: 'CHARM y CHARISMA comparten origen griego. En conservación, «charismatic species» es término técnico.' },
+    { n: 5, root: 'ICON', a: 'ICONIC', p: '-IC sobre sustantivo', tip: 'ICON → ICONIC. En conservación, «iconic species» es el término para las especies que atraen donaciones.' },
     { n: 6, root: 'INHABIT', a: 'INHABITANTS', p: '-ANT sobre verbo', tip: 'INHABIT → INHABITANT. Plural tras «the smallest».' },
     { n: 7, root: 'SURVIVE', a: 'SURVIVAL', p: '-AL sobre verbo', tip: 'SURVIVE → SURVIVAL. Los verbos en -VE toman -AL, no -MENT.' },
     { n: 8, root: 'MEASURE', a: 'IMMEASURABLY', p: 'IM- + -ABLE + -LY', tip: 'MEASURE → MEASURABLE → IMMEASURABLE → IMMEASURABLY. Adverbio que modifica al comparativo «greater».' }
